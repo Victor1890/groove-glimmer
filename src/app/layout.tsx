@@ -7,11 +7,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={clsx("font-sans antialiased", fontSans.className)}>
-        <main className="flex">
-          <Providers>
-            {children}
-          </Providers>
-        </main>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )

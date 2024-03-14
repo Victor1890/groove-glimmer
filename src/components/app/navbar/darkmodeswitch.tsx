@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme as useNextTheme } from "next-themes";
 import { Switch } from "@nextui-org/react";
 
-export const DarkModeSwitch = () => {
+const DarkModeSwitch = () => {
   const { setTheme, resolvedTheme } = useNextTheme();
   return (
     <Switch
@@ -11,3 +11,6 @@ export const DarkModeSwitch = () => {
     />
   );
 };
+
+
+export default DarkModeSwitch
