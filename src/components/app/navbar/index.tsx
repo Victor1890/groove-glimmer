@@ -27,18 +27,6 @@ const NavbarWrapper = ({ children }: Props) => {
           <BurguerButton />
         </NavbarContent>
         <div className="w-full" />
-        {/* <NavbarContent className="w-full max-md:hidden">
-          <Input
-            startContent={<SearchIcon />}
-            isClearable
-            className="w-full"
-            classNames={{
-              input: "w-full",
-              mainWrapper: "w-full",
-            }}
-            placeholder="Search..."
-          />
-        </NavbarContent> */}
         <NavbarContent
           justify="end"
           className="w-fit data-[justify=end]:flex-grow-0"
