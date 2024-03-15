@@ -23,9 +23,13 @@ export const Layout = ({ children }: Props) => {
         setCollapsed: handleToggleSidebar,
       }}
     >
-      <main className="flex">
-        <SidebarWrapper />
-        <NavbarWrapper>{children}</NavbarWrapper>
+      <main className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+        <NavbarWrapper>
+          <section className="flex">
+            <SidebarWrapper />
+            {children}
+          </section>
+        </NavbarWrapper>
       </main>
     </SidebarContext.Provider>
   );

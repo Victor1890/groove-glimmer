@@ -1,5 +1,5 @@
 import { Input, Link, Navbar, NavbarContent } from "@nextui-org/react";
-import React from "react";
+import React, { Fragment } from "react";
 import { FeedbackIcon } from "@/components/icons/navbar/feedback-icon";
 import { GithubIcon } from "@/components/icons/navbar/github-icon";
 import { SupportIcon } from "@/components/icons/navbar/support-icon";
@@ -15,7 +15,7 @@ interface Props {
 
 const NavbarWrapper = ({ children }: Props) => {
   return (
-    <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+    <Fragment>
       <Navbar
         isBordered
         className="w-full"
@@ -35,7 +35,7 @@ const NavbarWrapper = ({ children }: Props) => {
         </NavbarContent>
       </Navbar>
       {children}
-    </div>
+    </Fragment>
   );
 };
 
