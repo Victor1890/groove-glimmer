@@ -1,31 +1,21 @@
 import { FilterIcon } from "@/components/icons/sidebar/filter-icon";
 import { HomeIcon } from "@/components/icons/sidebar/home-icon";
 import { SettingsIcon } from "@/components/icons/sidebar/settings-icon";
-import { useSidebarContext } from "@/components/layout/layout-context";
 import { Avatar, Tooltip } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
 // import { CompaniesDropdown } from "./companies-dropdown";
 import { SidebarItem } from "./sidebar-item";
-import { Sidebar } from "./sidebar.styles";
 
 const SidebarWrapper = () => {
   const pathname = usePathname();
-  const { collapsed, setCollapsed } = useSidebarContext()
-
-  console.log("TEST: ", collapsed)
 
   return (
     <aside className="h-screen z-[202] sticky top-0">
-      {collapsed ? (
-        <div className={Sidebar.Overlay()} onClick={setCollapsed} />
-      ) : null}
       <div
-        className={Sidebar({
-          collapsed: collapsed,
-        })}
+        className="bg-background transition-transform h-full relative w-64 sm:w-full shrink-0 z-[202] overflow-y-auto border-r border-divider flex-col py-6 px-3 md:ml-0 md:flex md:static md:h-screen md:translate-x-0"
       >
         <div className="flex flex-col justify-between h-full">
-          <div className={Sidebar.Body()}>
+          <div className="flex flex-col gap-6 mt-9 px-2">
             <SidebarItem
               title="Home"
               icon={<HomeIcon />}
@@ -92,7 +82,7 @@ const SidebarWrapper = () => {
               />
             </SidebarMenu> */}
           </div>
-          <div className={Sidebar.Footer()}>
+          <div className="flex items-center justify-center gap-6 pt-16 pb-8 px-8 md:pt-10 md:pb-0">
             <Tooltip content={"Settings"} color="primary">
               <div className="max-w-fit">
                 <SettingsIcon />
