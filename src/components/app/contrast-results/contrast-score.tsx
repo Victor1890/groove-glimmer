@@ -1,3 +1,5 @@
+import { EmojiVeryHappyFill } from "@/components/icons/emoji";
+
 const ContrastScore = () => {
     return (
         <div className="flex justify-between items-end" style={{ color: "#079455" }}>
