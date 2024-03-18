@@ -9,9 +9,11 @@ export type WCAGLevelResultStore = {
     passAALargeText: boolean
     passAAANormalText: boolean
     passAAALargeText: boolean
+    updateWCAGLevelResult: (colors: Partial<Omit<ColorStore, 'updateColors'>>) => void
 }
 
 export type ContrastRelationStore = {
     contrast: number
     feedback: "poor" | "good" | "very-good"
+    updateContrastRelation: (colors: Partial<Omit<ColorStore, 'updateColors'>>) => void
 }

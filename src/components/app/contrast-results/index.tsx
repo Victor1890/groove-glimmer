@@ -1,15 +1,15 @@
-import { useWCAGLevelResultStore } from "@/stores/colors";
+import { useValidContrastLevel } from "@/hooks";
 import ContrastLevel from "./contrast-level";
 import ContrastScore from "./contrast-score";
 
 const ContrastResults = () => {
 
     const {
-        passAANormalText,
-        passAALargeText,
+        passAAALargeText,
         passAAANormalText,
-        passAAALargeText
-    } = useWCAGLevelResultStore()
+        passAALargeText,
+        passAANormalText
+    } = useValidContrastLevel()
 
     return (
         <div className="flex flex-col gap-8 mt-8">

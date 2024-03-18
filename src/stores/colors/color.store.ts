@@ -18,15 +18,26 @@ export const useColorStore = create<ColorStore>((set, get) => ({
     updateColors: (colors) => set({ ...get(), ...colors })
 }))
 
-export const useWCAGLevelResultStore = create<WCAGLevelResultStore>((set) => {
-    const { bg, fg } = useColorStore.getState()
-    return wcagContrastTest(bg, fg)
+export const useWCAGLevelResultStore = create<WCAGLevelResultStore>((set, get) => {
+    return {
+        passAAALargeText: false,
+        passAAANormalText: false,
+        passAALargeText: false,
+        passAANormalText: false,
+        updateWCAGLevelResult: (colors) => {
+            set({
+                ...get(),
+                ...wcagContrastTest(colors.bg || "", colors.fg || "")
+            })
+        }
+    }
 })
 
-export const useContrastRelationStore = create<ContrastRelationStore>((set, get) => {
+export const useContrastRelationStore = create<ContrastRelationStore>((set) => {
 
     const { bg, fg } = useColorStore.getState()
-    const contrast = Color(bg).contrast(Color(fg));
+
+    let contrast = Color(bg).contrast(Color(fg));
     let feedback: "poor" | "good" | "very-good" = "poor";
 
     if (contrast > contrastGuidelines.AAALevel.largeText) feedback = "good";
@@ -34,6 +45,19 @@ export const useContrastRelationStore = create<ContrastRelationStore>((set, get)
 
     return {
         contrast,
-        feedback
+        feedback,
+        updateContrastRelation: ({ bg, fg }) => {
+
+            contrast = Color(bg).contrast(Color(fg));
+
+            if (contrast > contrastGuidelines.AAALevel.largeText) feedback = "good";
+            if (contrast > contrastGuidelines.AAALevel.normalText) feedback = "very-good";
+
+            set({
+                contrast,
+                feedback
+            })
+
+        }
     }
 })

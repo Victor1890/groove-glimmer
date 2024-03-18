@@ -1,6 +1,7 @@
 import { Fragment } from "react";
-import ColorControl from "../color-control";
+import BackgroundInput from "./background";
 import { SuggestionsButton, SwapButton } from "./button";
+import ForegroundInput from "./foreground";
 
 const ColorInputs = () => {
 
@@ -8,14 +9,14 @@ const ColorInputs = () => {
 
     return (
         <Fragment>
-            <div className="flex flex-col items-center gap-8">
-                <ColorControl label="Background Color" value="#000" />
-            </div>
+            <BackgroundInput />
 
-            <div className="flex flex-row md:flex-col gap-3">
+            <div className="flex justify-center items-center flex-row md:flex-col gap-3">
                 <SwapButton />
                 <SuggestionsButton />
             </div>
+
+            <ForegroundInput />
         </Fragment>
     )
 }
