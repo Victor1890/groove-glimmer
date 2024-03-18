@@ -12,7 +12,7 @@ const ButtonPicker = ({ color, setColor }: ButtonPickerProps) => {
     return (
         <Popover>
             <PopoverTrigger>
-                <Button isIconOnly>
+                <Button isIconOnly variant="light">
                     <ColorPickerFill className="text-2xl" />
                 </Button>
             </PopoverTrigger>

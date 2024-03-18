@@ -25,7 +25,7 @@ const ColorInput = ({ value: valueProp = '', onChange, fallback = "#000000" }: C
 
     return (
         <input
-            className="text-[1.5rem] leading-[32px] font-medium w=[100%]"
+            className="text-[1.5rem] leading-[32px] font-medium w-[100%]"
             type="text"
             value={value}
             placeholder={fallback}
