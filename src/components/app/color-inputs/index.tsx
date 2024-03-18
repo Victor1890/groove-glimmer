@@ -1,15 +1,10 @@
+import ColorControl from "../color-control";
+
 const ColorInputs = () => {
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "8",
-            }}
-        >
-
+        <div className="flex flex-col items-center gap-8">
+            <ColorControl label="Background Color" value="#000" />
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { Divider } from "@nextui-org/react";
 import ContrastResults from "../contrast-results";
 import Section from "./section";
+import ColorInputs from "../color-inputs";
 
 const SidebarWrapper = () => {
 
@@ -16,7 +17,7 @@ const SidebarWrapper = () => {
             </Section>
             <Divider />
             <Section label="Color Inputs">
-              <ContrastResults />
+              <ColorInputs />
             </Section>
           </div>
         </div>

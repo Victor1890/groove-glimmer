@@ -1,5 +1,5 @@
+import { regexColorHexadecimal } from "@/constants"
 import { useControllable } from "@/hooks/use-controllable"
-import { regexColorHexadecimal } from "@/utils/regex.util"
 import { ChangeEvent } from "react"
 
 interface ColorInputProps {
@@ -25,7 +25,7 @@ const ColorInput = ({ value: valueProp = '', onChange, fallback = "#000000" }: C
 
     return (
         <input
-            className=""
+            className="text-[1.5rem] leading-[32px] font-medium w=[100%]"
             type="text"
             value={value}
             placeholder={fallback}
