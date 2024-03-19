@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --colors-text-secondary: #344054;
+  --colors-tertiary: #f5f5f5;
+}
+
 html,
 body {
   padding: 0;

@@ -11,9 +11,10 @@ const NavbarWrapper = () => {
   return (
     <Navbar
       isBordered
-      className="w-full"
+      className="flex flex-col justify-center z-10 relative"
       classNames={{
         wrapper: "w-full max-w-full",
+        content: "flex flex-row justify-between w-full max-w-full px-4 py-2",
       }}
     >
       <NavbarContent className="md:hidden">

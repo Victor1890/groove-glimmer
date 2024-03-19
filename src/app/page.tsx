@@ -1,5 +1,5 @@
-import { Content } from "@/components/pages/home/content";
+import Preview from "@/components/pages/preview";
 
-const Home = () => <Content />
+const Page = () => <Preview />
 
-export default Home;
+export default Page;
