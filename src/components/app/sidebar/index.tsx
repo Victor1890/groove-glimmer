@@ -6,7 +6,7 @@ import ContrastResults from "../contrast-results";
 import Section from "./section";
 
 
-const SidebarWrapper = () => {
+const Sidebar = () => {
 
   return (
     <aside className="h-auto lg:h-screen sticky top-0">
@@ -44,4 +44,4 @@ const SidebarWrapper = () => {
   );
 };
 
-export default SidebarWrapper
+export default Sidebar
