@@ -1,6 +1,6 @@
 import { CloseFill } from "@/components/icons/checks";
 import { LightFill } from "@/components/icons/navbar";
-import useToggle from "@/hooks/use-toggle";
+import { useToggle } from "@/hooks";
 import {
     Button,
     Modal,
@@ -9,10 +9,11 @@ import {
     ModalHeader
 } from "@nextui-org/react";
 import { Fragment } from "react";
+import Suggestions from "../../suggestions";
 
 const SuggestionsButton = () => {
 
-    const { isEnabled: open, onOpen, onClose, setOpen } = useToggle();
+    const { isEnabled: open, onOpen, onClose } = useToggle();
 
     return (
         <Fragment>
@@ -26,15 +27,16 @@ const SuggestionsButton = () => {
                 <LightFill />
             </Button>
             <Modal
-                size="md"
+                size="4xl"
                 backdrop="blur"
                 isOpen={open}
                 isDismissable={false}
                 isKeyboardDismissDisabled={true}
                 hideCloseButton
+                scrollBehavior="inside"
             >
                 <ModalContent>
-                    <ModalHeader className="flex items-center justify-between p-6">
+                    <ModalHeader className="flex items-center justify-between p-6 border-b border-solid">
                         <span className="font-bold">Contrast suggestions</span>
                         <Button
                             isIconOnly
@@ -46,11 +48,13 @@ const SuggestionsButton = () => {
                         </Button>
                     </ModalHeader>
                     <ModalBody>
-                        <section>
+                        <section className="mb-4">
                             <span className="font-medium text-[1.125rem] leading-[28px] mb-4">Background Suggestions</span>
-                            <div className="grid gap-5 grid-cols-2">
-
-                            </div>
+                            <Suggestions className="grid-cols-2" type="background" onApply={onClose} />
+                        </section>
+                        <section className="mb-4">
+                            <span className="font-medium text-[1.125rem] leading-[28px] mb-4">Foreground Suggestions</span>
+                            <Suggestions className="grid-cols-2" type="foreground" onApply={onClose} />
                         </section>
                     </ModalBody>
                 </ModalContent>

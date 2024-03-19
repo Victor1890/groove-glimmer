@@ -1,6 +1,6 @@
 import { CheckFill } from "@/components/icons/checks";
 import { ClipboardLine } from "@/components/icons/navbar";
-import useCopyToClipboard from "@/hooks/use-copy-to-clipboard";
+import { useCopyToClipboard } from "@/hooks";
 import useToggle from "@/hooks/use-toggle";
 import { Button } from "@nextui-org/react";
 import { useEffect, useRef } from "react";

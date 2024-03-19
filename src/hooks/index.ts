@@ -1,8 +1,8 @@
-export * from './use-copy-to-clipboard'
+export { default as useCopyToClipboard } from './use-copy-to-clipboard'
 
 export * from './use-controllable'
 
-export * from './use-toggle'
+export { default as useToggle } from './use-toggle'
 
 export * from './useBodyLock'
 
