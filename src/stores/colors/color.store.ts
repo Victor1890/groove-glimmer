@@ -48,6 +48,7 @@ export const useContrastRelationStore = create<ContrastRelationStore>((set) => {
         feedback,
         updateContrastRelation: ({ bg, fg }) => {
 
+            feedback = "poor";
             contrast = Color(bg).contrast(Color(fg));
 
             if (contrast > contrastGuidelines.AAALevel.largeText) feedback = "good";

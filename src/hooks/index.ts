@@ -13,3 +13,5 @@ export * from './use-valid-contrast-level'
 export * from './use-contrast-score'
 
 export * from './use-swap-colors'
+
+export { useMediaQuery } from './use-media-query'
