@@ -1,5 +1,6 @@
 'use client'
 
+import MinimalistPage from "@/components/app/minimalist-page";
 import { ToggleButton, ToggleButtonItem } from "@/components/app/toggle-button"
 import { useColorStore } from "@/stores/colors"
 import { useState } from "react";
@@ -23,6 +24,7 @@ const Preview = () => {
                         <ToggleButtonItem value={previewModes.uiElements}>UI Elements</ToggleButtonItem>
                     </ToggleButton>
                 </div>
+                {previewMode === previewModes.minimalistPage ? <MinimalistPage /> : null}
             </section>
         </div>
     )
