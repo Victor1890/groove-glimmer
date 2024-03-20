@@ -5,7 +5,9 @@ import {
     WindowMockup,
     Navbar,
     Hero,
-    About
+    About,
+    Releases,
+    Tours
 } from "./components";
 
 
@@ -18,6 +20,8 @@ function MinimalistPage() {
             <div className="flex flex-col gap-12 mt-8 lg:gap-16">
                 <Hero />
                 <About />
+                <Releases />
+                <Tours />
             </div>
         </div>
     )
