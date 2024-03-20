@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { applyStyle } from "@/utils/color.util";
-import { tuskerGrotesk } from '@/libs/fonts'
+import { tuskerGrotesk } from '@/config/fonts'
 import clsx from "clsx";
 
 export function Hero() {
