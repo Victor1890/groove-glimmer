@@ -11,7 +11,7 @@ interface ColorControlProps {
 const ColorControl = ({ label, onChange, value }: ColorControlProps) => {
 
     return (
-        <div className="flex items-center flex-1 w-[100%] gap-4">
+        <div className="flex items-center flex-1 w-full gap-4">
             {/* Preview */}
             <div className="w-20 h-20 rounded-xl shadow-[--shadows-sm] shrink-0" style={{ backgroundColor: value }} />
 
