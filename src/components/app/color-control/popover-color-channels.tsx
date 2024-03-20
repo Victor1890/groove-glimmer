@@ -36,9 +36,10 @@ const PopoverColorChannels = ({ value, onChange }: PopoverColorChannelsProps) =>
         setColor(resolvedColor);
     };
 
+    // TODO: Add a color picker to select a color
     return (
         <Fragment>
-            <div className="flex items-center justify-between w-[100%]">
+            <div className="flex items-center justify-between w-full">
                 <span className="font-medium">Color Space</span>
 
                 <Select
