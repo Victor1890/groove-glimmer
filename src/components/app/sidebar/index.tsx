@@ -9,7 +9,7 @@ import Section from "./section";
 const Sidebar = () => {
 
   return (
-    <aside className="h-auto lg:h-screen sticky top-0">
+    <aside className="h-auto sticky top-0">
       <div
         className="bg-background transition-transform h-full relative w-full lg:w-96 shrink-0 z-[202] overflow-y-auto sm:border-r sm:border-divider py-6 px-3 md:ml-0 md:flex md:flex-col md:static md:translate-x-0"
       >
