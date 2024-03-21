@@ -5,7 +5,7 @@ import { ToggleButton, ToggleButtonItem } from "@/components/app/toggle-button"
 import { useColorStore } from "@/stores/colors"
 import { bgVar, fgVar } from "@/utils/color.util";
 import Color from "color";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const previewModes = {
     minimalistPage: "minimalist-page",
@@ -17,12 +17,16 @@ const Preview = () => {
     const [previewMode, setPreviewMode] = useState<string>(previewModes.minimalistPage);
     const [{ bgRgb, fgRgb }, setColors] = useState<{ bgRgb: string, fgRgb: string }>({ bgRgb: "", fgRgb: "" });
 
-    useColorStore.subscribe(({ bg, fg }) => {
-        const bgRgb = Color(bg).rgb().round().array().join(" ");
-        const fgRgb = Color(fg).rgb().round().array().join(" ");
+    useEffect(() => {
+        const unsubscribe = useColorStore.subscribe(({ bg, fg }) => {
+            const bgRgb = Color(bg).rgb().round().array().join(" ");
+            const fgRgb = Color(fg).rgb().round().array().join(" ");
 
-        setColors({ bgRgb, fgRgb })
-    })
+            setColors({ bgRgb, fgRgb })
+        })
+
+        return () => unsubscribe()
+    }, [])
 
     return (
         <div style={{
