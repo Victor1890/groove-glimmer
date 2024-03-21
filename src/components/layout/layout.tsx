@@ -2,6 +2,7 @@
 import Navbar from "@/components/app/navbar";
 import Sidebar from "@/components/app/sidebar";
 import Footer from "../app/footer";
+import { Fragment } from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -9,21 +10,19 @@ interface Props {
 
 export const Layout = ({ children }: Props) => {
   return (
-    <main className="flex flex-col">
-      <Navbar />
-      <div className="flex flex-col lg:flex-row overflow-auto">
-        <Sidebar />
-        <section className="bg-tertiary flex flex-col flex-1 w-full overflow-auto h-auto md:h-screen">
+    <Fragment>
+      <header className=" bg-white h-16 flex flex-col justify-center border-1 border-solid sticky top-0 z-10">
+        <Navbar />
+      </header>
+      <main className="flex items-start flex-col lg:flex-row">
+        <aside className="w-full lg:h-screen lg:w-auto sticky overflow-auto">
+          <Sidebar />
+        </aside>
+        <section className="bg-tertiary flex-1 w-full">
           {children}
           <Footer />
         </section>
-        {/* <section className="bg-tertiary flex flex-col">
-          <div className="h-screen">
-            {children}
-            <Footer />
-          </div>
-        </section> */}
-      </div>
-    </main>
+      </main>
+    </Fragment>
   );
 };
