@@ -12,7 +12,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={clsx("font-sans antialiased", fontSans.className)}>
+      <body
+        className={clsx(
+          "font-sans antialiased overflow-auto lg:overflow-hidden",
+          fontSans.className
+        )}
+      >
         <Providers>
           {children}
         </Providers>
