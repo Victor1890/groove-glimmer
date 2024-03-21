@@ -13,9 +13,11 @@ export const Layout = ({ children }: Props) => {
       <Navbar />
       <div className="flex flex-col lg:flex-row">
         <Sidebar />
-        <section style={{ overflow: "auto !important" }} className="bg-tertiary flex flex-col w-full overflow-auto">
-          {children}
-          <Footer />
+        <section className="bg-tertiary flex flex-col w-full overflow-auto">
+          <div className="h-screen">
+            {children}
+            <Footer />
+          </div>
         </section>
       </div>
     </main>
