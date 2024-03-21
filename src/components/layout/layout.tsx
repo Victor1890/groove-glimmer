@@ -9,11 +9,11 @@ interface Props {
 
 export const Layout = ({ children }: Props) => {
   return (
-    <main className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+    <main className="relative flex flex-col flex-1">
       <Navbar />
       <div className="flex flex-col lg:flex-row">
         <Sidebar />
-        <section className="bg-tertiary flex flex-col w-full">
+        <section style={{ overflow: "auto !important" }} className="bg-tertiary flex flex-col w-full overflow-auto">
           {children}
           <Footer />
         </section>
