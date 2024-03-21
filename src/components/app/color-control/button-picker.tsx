@@ -10,7 +10,7 @@ interface ButtonPickerProps {
 const ButtonPicker = ({ color, setColor }: ButtonPickerProps) => {
 
     return (
-        <Popover>
+        <Popover placement="right">
             <PopoverTrigger>
                 <Button isIconOnly variant="light">
                     <ColorPickerFill className="text-2xl" />

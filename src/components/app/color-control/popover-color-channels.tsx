@@ -36,19 +36,23 @@ const PopoverColorChannels = ({ value, onChange }: PopoverColorChannelsProps) =>
         setColor(resolvedColor);
     };
 
-    // TODO: Add a color picker to select a color
     return (
         <Fragment>
             <div className="flex items-center justify-between w-full">
-                <span className="font-medium">Color Space</span>
+                <span className="font-medium w-full">Color Space</span>
 
                 <Select
                     name={mode}
                     onChange={(e) => setMode(e.target.value as keyof ColorMode)}
+                    placeholder={mode}
+                    classNames={{
+                        value: "uppercase",
+                        listbox: "uppercase"
+                    }}
                 >
                     {
                         modesList.map((name) => (
-                            <SelectItem className="uppercase" key={name} value={name}>
+                            <SelectItem key={name} value={name}>
                                 {name}
                             </SelectItem>
                         ))
