@@ -14,7 +14,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body
         className={clsx(
-          "font-sans antialiased",
+          "font-sans antialiased overflow-auto lg:overflow-hidden",
           fontSans.className
         )}
       >
