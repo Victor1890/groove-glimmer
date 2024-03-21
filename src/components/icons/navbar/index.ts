@@ -2,7 +2,7 @@ export { default as ClipboardLine } from './ClipboardLine'
 
 export { FeedbackIcon } from './feedback-icon'
 
-export { GithubIcon } from './github-icon'
+export { default as GithubIcon } from './github-icon'
 
 export { NotificationIcon } from './NotificationIcon'
 
