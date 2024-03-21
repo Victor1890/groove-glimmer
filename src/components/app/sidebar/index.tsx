@@ -13,7 +13,7 @@ const Sidebar = () => {
       <div
         className="bg-background transition-transform h-full relative w-full lg:w-96 shrink-0 z-[202] overflow-y-auto sm:border-r sm:border-divider py-6 px-3 md:ml-0 md:flex md:flex-col md:static md:translate-x-0"
       >
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between mb-10">
           <div className="flex flex-col gap-6 px-2">
 
             <Section label="Contrast Relation">
