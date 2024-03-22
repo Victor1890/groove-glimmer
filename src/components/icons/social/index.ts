@@ -1,0 +1,1 @@
+export { LinkedInFill } from './linkedin'

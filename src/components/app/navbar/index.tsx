@@ -1,11 +1,7 @@
 import { GithubIcon } from "@/components/icons/navbar";
 import Link from "next/link";
 import React from "react";
-import DarkModeSwitch from "./darkmodeswitch";
-
-interface Props {
-  children: React.ReactNode;
-}
+// import DarkModeSwitch from "./darkmodeswitch";
 
 const NavbarWrapper = () => {
   return (
@@ -15,7 +11,7 @@ const NavbarWrapper = () => {
           Groove Glimmer
         </div>
         <div className="flex flex-row items-center gap-5">
-          <DarkModeSwitch />
+          {/* <DarkModeSwitch /> */}
           <Link
             target="_blank"
             aria-label="Star on Github"

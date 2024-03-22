@@ -1,29 +1,28 @@
-function Footer() {
+import { LinkedInFill } from "@/components/icons/social";
 
-    return (
-        <footer className="mt-8 pb-6 flex items-center justify-center max-w-xl mx-auto px-4 md:px-6">
+const Footer = () => (
+    <footer className="mt-8 pb-6 flex items-center justify-between max-w-xl mx-auto px-4 md:px-6 text-{#344054}">
+        <div className="flex">
             <p>
                 Made by
-                <a className="ml-1 underline" href="https://github.com/AlexGarrixen">
-                    Victor Rosario
+                <a className="ml-1 underline font-bold" href="https://github.com/victor1890">
+                    Victor Rosario 💫
                 </a>
             </p>
             <p className="ml-5">
                 Original design by
-                <a className="ml-1 underline" href="https://github.com/AlexGarrixen">
+                <a className="ml-1 underline font-bold" href="https://github.com/AlexGarrixen">
                     Alex Garrixen
                 </a>
             </p>
-            {/* <div className={classes.icons}>
-                <a aria-label="my website" href="https://alextexis.vercel.app">
-                    <LinkFill />
-                </a>
-                <a aria-label="x account" href="https://twitter.com/AlexGarrixen">
-                    <SocialXFill />
-                </a>
-            </div> */}
-        </footer>
-    )
-}
+
+        </div>
+        <div className="flex gap-4">
+            <a aria-label="my linkedin" href="https://alextexis.vercel.app">
+                <LinkedInFill width={24} height={24} />
+            </a>
+        </div>
+    </footer>
+)
 
 export default Footer;
