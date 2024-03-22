@@ -33,7 +33,7 @@ const Preview = () => {
             marginInline: "auto",
             [fgVar as string]: fgRgb,
             [bgVar as string]: bgRgb
-        }} className="w-full px-4 md:px-6">
+        }} className="w-full px-4 md:px-6 md:pt-14">
             <section className="my-6">
                 <div className="text-center mb-6">
                     <ToggleButton defaultValue={previewMode} onChange={setPreviewMode}>
