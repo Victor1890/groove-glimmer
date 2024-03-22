@@ -18,7 +18,7 @@ const Footer = () => (
 
         </div>
         <div className="flex gap-4">
-            <a aria-label="my linkedin" href="https://alextexis.vercel.app">
+            <a aria-label="my linkedin" href="https://www.linkedin.com/in/victor-j-rosario-v/?locale=en_US">
                 <LinkedInFill width={24} height={24} />
             </a>
         </div>
