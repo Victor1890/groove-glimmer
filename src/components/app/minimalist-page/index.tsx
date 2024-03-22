@@ -7,7 +7,8 @@ import {
     Hero,
     About,
     Releases,
-    Tours
+    Tours,
+    Footer
 } from "./components";
 
 function MinimalistPage() {
@@ -20,6 +21,7 @@ function MinimalistPage() {
                 <About />
                 <Releases />
                 <Tours />
+                <Footer />
             </div>
         </div>
     )
