@@ -16,9 +16,14 @@ module.exports = {
       },
       colors: {
         tertiary: "var(--colors-tertiary)",
+        bgDefault: "#FDFBF6",
       },
       textColor: {
-        "colors-text-secondary": "var(--colors-text-secondary)"
+        "colors-text-secondary": "var(--colors-text-secondary)",
+        fgDefault: "#242422",
+      },
+      flex: {
+        0: "0 0 auto",
       }
     },
   },
