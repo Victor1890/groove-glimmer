@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        '--shadows-sm': "0px 1px 2px 0px rgba(0, 0, 0, .06), 0px 1px 3px 0px rgba(0, 0, 0, .1)"
+        'sm-custom': "0px 1px 2px 0px rgba(0, 0, 0, .06), 0px 1px 3px 0px rgba(0, 0, 0, .1)"
       },
       colors: {
         tertiary: "var(--colors-tertiary)",
