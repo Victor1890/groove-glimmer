@@ -15,7 +15,7 @@ const previewModes = {
 
 const Preview = () => {
 
-    const [previewMode, setPreviewMode] = useState<string>(previewModes.uiElements);
+    const [previewMode, setPreviewMode] = useState<string>(previewModes.minimalistPage);
     const { bgRgb, fgRgb } = useColor()
 
     const styles: CSSProperties = useMemo(() => ({
