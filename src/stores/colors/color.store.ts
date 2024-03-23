@@ -8,8 +8,8 @@ import {
 
 import { wcagContrastTest, contrastGuidelines } from "@/libs/wcag-text-contrast";
 
-const BG_DEFAULT_COLOR = '#FDFBF6'
-const FG_DEFAULT_COLOR = '#242422'
+export const BG_DEFAULT_COLOR = '#FDFBF6'
+export const FG_DEFAULT_COLOR = '#242422'
 
 
 export const useColorStore = create<ColorStore>((set, get) => ({

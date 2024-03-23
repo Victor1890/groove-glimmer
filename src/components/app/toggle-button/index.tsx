@@ -10,7 +10,7 @@ export function ToggleButton({ children, defaultValue, onChange }: RootProps) {
 
     return (
         <ToggleContext.Provider value={valueProvider}>
-            <div className="p-1 inline-block rounded-lg border-1 border-solid">{children}</div>
+            <div className="p-1 inline-block rounded-lg border-1 border-solid bg-white">{children}</div>
         </ToggleContext.Provider>
     );
 }
@@ -22,10 +22,11 @@ export function ToggleButtonItem({ children, value }: ItemProps) {
     return (
         <Button
             aria-pressed={isEnabled ? "true" : "false"}
-            size='sm'
+            size='md'
+            color='primary'
             className={clsx(
-                "bg-transparent",
-                isEnabled ? "font-semibold bg-white" : "text-colors-text-secondary",
+                "",
+                isEnabled ? "font-semibold" : "text-colors-text-secondary bg-white",
             )}
             onClick={() => {
                 setValue(value);

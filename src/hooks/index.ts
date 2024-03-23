@@ -15,3 +15,5 @@ export * from './use-contrast-score'
 export * from './use-swap-colors'
 
 export { useMediaQuery } from './use-media-query'
+
+export { useColor } from "./use-color"

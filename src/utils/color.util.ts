@@ -20,6 +20,7 @@ interface StyleFnOpts {
 
 export function applyStyle(property: "bg" | "color", options?: StyleFnOpts): CSSProperties {
     const resolvedVar = property === "bg" ? cssBgVar : cssFgVar;
+
     const targetOpts = { fromVar: resolvedVar, alpha: "1" } satisfies StyleFnOpts;
 
     Object.assign(targetOpts, options);
