@@ -4,7 +4,8 @@ import {
     Example02,
     Example03,
     Example04,
-    Example05
+    Example05,
+    Example06
 } from './examples'
 
 function UIElements() {
@@ -17,6 +18,7 @@ function UIElements() {
                 <Example03 />
                 <Example04 />
                 <Example05 />
+                <Example06 />
             </Masonry>
         </ResponsiveMasonry>
     )

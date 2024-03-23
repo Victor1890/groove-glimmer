@@ -4,7 +4,7 @@ import { applyStyle, cssFgVar } from "@/utils/color.util";
 import { Card, CardBody } from "@nextui-org/react";
 import Container from "../container";
 
-function Example05() {
+function Example06() {
 
     const { bgRgb } = useColor()
 
@@ -12,10 +12,9 @@ function Example05() {
         <Container className="bg-bgDefault">
             <Card style={{ ...applyStyle("bg"), ...applyStyle("color") }}>
                 <CardBody className="flex flex-col gap-6 p-6 rounded-xl">
-                    <p>Server Resources</p>
-                    <div>
-                        <p className="text-lg font-bold">$30,227.00</p>
-                        <p className="text-base mt-2">Estimated savings</p>
+                    <div className="flex items-center justify-between">
+                        <p className="text-lg font-medium">Project Progress</p>
+                        <p className="text-sm">50%</p>
                     </div>
                     <div className="relative flex items-center select-none touch-none">
                         <div
@@ -25,20 +24,10 @@ function Example05() {
                             <div
                                 className="absolute h-full rounded-full"
                                 style={{
-                                    width: "40%",
+                                    width: "50%",
                                     ...(Boolean(bgRgb) ? { ...applyStyle("bg", { fromVar: cssFgVar, alpha: "1" }) } : { backgroundColor: FG_DEFAULT_COLOR })
                                 }}
                             />
-                        </div>
-                    </div>
-                    <div className="flex justify-between items-center">
-                        <div>
-                            <p className="text-lg font-bold">$20,124/mo</p>
-                            <p className="text-sm mt-2">Total saved</p>
-                        </div>
-                        <div>
-                            <p className="text-lg font-bold">$10,124/mo</p>
-                            <p className="text-sm mt-2">Saving in progress</p>
                         </div>
                     </div>
                 </CardBody>
@@ -47,4 +36,4 @@ function Example05() {
     )
 }
 
-export default Example05;
+export default Example06;

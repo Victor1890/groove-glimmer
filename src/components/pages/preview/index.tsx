@@ -1,13 +1,12 @@
 'use client'
 
 import MinimalistPage from "@/components/app/minimalist-page";
-import { ToggleButton, ToggleButtonItem } from "@/components/app/toggle-button"
+import { ToggleButton, ToggleButtonItem } from "@/components/app/toggle-button";
 import UIElements from "@/components/app/ui-elements";
-import { BG_DEFAULT_COLOR, FG_DEFAULT_COLOR, useColorStore } from "@/stores/colors"
+import { useColor } from "@/hooks";
+import { BG_DEFAULT_COLOR, FG_DEFAULT_COLOR } from "@/stores/colors";
 import { bgVar, fgVar } from "@/utils/color.util";
-import clsx from "clsx";
-import Color from "color";
-import { CSSProperties, useEffect, useMemo, useState } from "react";
+import { CSSProperties, useMemo, useState } from "react";
 
 const previewModes = {
     minimalistPage: "minimalist-page",
@@ -17,24 +16,13 @@ const previewModes = {
 const Preview = () => {
 
     const [previewMode, setPreviewMode] = useState<string>(previewModes.uiElements);
-    const [{ bgRgb, fgRgb }, setColors] = useState<{ bgRgb: string, fgRgb: string }>({ bgRgb: "", fgRgb: "" });
+    const { bgRgb, fgRgb } = useColor()
 
     const styles: CSSProperties = useMemo(() => ({
         marginInline: "auto",
         [fgVar]: fgRgb || FG_DEFAULT_COLOR,
         [bgVar]: bgRgb || BG_DEFAULT_COLOR
     }), [fgRgb, bgRgb])
-
-    useEffect(() => {
-        const unsubscribe = useColorStore.subscribe(({ bg, fg }) => {
-            const bgRgb = Color(bg).rgb().round().array().join(" ");
-            const fgRgb = Color(fg).rgb().round().array().join(" ");
-
-            setColors({ bgRgb, fgRgb })
-        })
-
-        return () => unsubscribe()
-    }, [])
 
     return (
         <div className="w-full px-4 md:px-6 md:pt-14">
