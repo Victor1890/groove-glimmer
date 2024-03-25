@@ -3,22 +3,17 @@ import BackgroundInput from "./background";
 import { SuggestionsButton, SwapButton } from "./button";
 import ForegroundInput from "./foreground";
 
-const ColorInputs = () => {
+const ColorInputs = () => (
+    <Fragment>
+        <BackgroundInput />
 
+        <div className="flex justify-center items-center flex-row md:flex-col gap-3">
+            <SwapButton />
+            <SuggestionsButton />
+        </div>
 
-
-    return (
-        <Fragment>
-            <BackgroundInput />
-
-            <div className="flex justify-center items-center flex-row md:flex-col gap-3">
-                <SwapButton />
-                <SuggestionsButton />
-            </div>
-
-            <ForegroundInput />
-        </Fragment>
-    )
-}
+        <ForegroundInput />
+    </Fragment>
+)
 
 export default ColorInputs;

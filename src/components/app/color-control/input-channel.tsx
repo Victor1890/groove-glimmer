@@ -11,7 +11,6 @@ interface InputChannelProps {
     value?: number;
 }
 
-
 const InputChannel = ({ label, max = 100, min = 0, onChange, value }: InputChannelProps) => {
 
     const valueToString = useMemo(() => value?.toString() || "0", [value]);
@@ -40,8 +39,6 @@ const InputChannel = ({ label, max = 100, min = 0, onChange, value }: InputChann
 
         setInputValue(nextValue, true);
     }
-
-    // TODO: This is the input component that is used in the PopoverColorChannels component
 
     return (
         <div className="flex items-center justify-between">

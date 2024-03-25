@@ -33,9 +33,7 @@ const Preview = () => {
                         <ToggleButtonItem value={previewModes.uiElements}>UI Elements</ToggleButtonItem>
                     </ToggleButton>
                 </div>
-                {/* <div className="bg-bgDefault"> */}
                 {previewMode === previewModes.minimalistPage ? <MinimalistPage /> : <UIElements />}
-                {/* </div> */}
             </section>
         </div>
     )
