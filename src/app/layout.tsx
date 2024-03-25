@@ -1,7 +1,7 @@
 import { fontSans } from '@/config/fonts';
 import "@/styles/globals.css";
 import clsx from "clsx";
-import { Providers } from "./providers";
+import { Providers } from "@/libs/providers/providers";
 import { metadata } from '@/config/seo';
 
 export { metadata }

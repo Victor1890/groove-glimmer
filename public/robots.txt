@@ -1,0 +1,62 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Slurp
+User-agent: Slurp
+Allow: /
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+
+# Baiduspider
+User-agent: Baiduspider
+Allow: /
+
+# YandexBot
+User-agent: YandexBot
+Allow: /
+
+# Sogou
+User-agent: Sogou
+Allow: /
+
+# facebot
+User-agent: facebot
+Allow: /
+
+# ia_archiver
+User-agent: ia_archiver
+Allow: /
+
+# Twitterbot
+User-agent: Twitterbot
+Allow: /
+
+# WhatsApp
+User-agent: WhatsApp
+Allow: /
+
+# Slackbot
+User-agent: Slackbot
+Allow: /
+
+# TelegramBot
+User-agent: TelegramBot
+Allow: /
+
+# Host
+Host: https://groove-glimmer.vercel.app
