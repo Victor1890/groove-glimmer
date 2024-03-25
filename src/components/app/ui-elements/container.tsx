@@ -1,15 +1,15 @@
 import clsx from "clsx";
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
 
-interface ContainerProps {
+interface ContainerProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
     children: ReactNode;
     className?: string;
     style?: CSSProperties
 }
 
-function Container({ children, className, style }: ContainerProps) {
+function Container({ children, className, ...props }: ContainerProps) {
     return (
-        <article style={style} className={clsx("border-solid border-1 border-[#eaecf0] rounded-xl", className)}>
+        <article className={clsx("border-solid border-1 border-[#eaecf0] rounded-xl", className)} {...props}>
             {children}
         </article>
     )
