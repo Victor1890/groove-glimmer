@@ -2,12 +2,9 @@ import { fontSans } from '@/config/fonts';
 import "@/styles/globals.css";
 import clsx from "clsx";
 import { Providers } from "./providers";
-import type { Metadata } from 'next';
+import { metadata } from '@/config/seo';
 
-
-export const metadata: Metadata = {
-  title: "Groove Glimmer"
-}
+export { metadata }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
