@@ -22,6 +22,9 @@ export function ToggleButtonItem({ children, value }: ItemProps) {
     return (
         <Button
             aria-pressed={isEnabled ? "true" : "false"}
+            aria-label='Toggle Button Item'
+            title='Toggle Button Item'
+            aria-labelledby='Toggle Button Item'
             size='md'
             color='primary'
             className={clsx(

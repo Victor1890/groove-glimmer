@@ -20,7 +20,9 @@ const SuggestionsButton = () => {
             <Button
                 isIconOnly
                 variant="light"
-                aria-label="suggestions button"
+                aria-label="Suggestions Button"
+                title="Suggestions Button"
+                aria-labelledby="Suggestions Button"
                 className="text-[1.5rem] lg:hidden"
                 onClick={onOpen}
             >

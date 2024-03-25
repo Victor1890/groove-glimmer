@@ -11,9 +11,9 @@ export function useContrastScore() {
 
     const color = useMemo(() => {
         const semanticColor = {
-            "poor": "#d92d20",
-            "good": "#079455",
-            "very-good": "#079455",
+            "poor": "#961D12",
+            "good": "#00660F",
+            "very-good": "#00660F",
         };
 
         return semanticColor[feedback];

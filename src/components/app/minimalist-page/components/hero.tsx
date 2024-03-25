@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "@nextui-org/react"
 import { applyStyle } from "@/utils/color.util";
 import { tuskerGrotesk } from '@/config/fonts'
 import clsx from "clsx";
@@ -21,9 +21,9 @@ export function Hero() {
                     alt="background hero"
                     className="w-full object-cover h-[380px] lg:h-[460px]"
                     height='800'
-                    loading="lazy"
+                    loading="eager"
                     src={"/assets/img/hero-image.webp"}
-                    width={'800'}
+                    width='800'
                 />
             </figure>
         </section>

@@ -32,6 +32,9 @@ const ButtonClipboard = ({ color }: ButtonClipboardProps) => {
             className="border-none text-2xl"
             isIconOnly
             onClick={onClick}
+            aria-label="Copy to Clipboard"
+            title="Copy to Clipboard"
+            aria-labelledby="Copy to Clipboard"
         >
             {isEnabled ? <CheckFill aria-label="check" /> : <ClipboardLine aria-label="clipboard" />}
         </Button>

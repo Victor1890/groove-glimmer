@@ -9,8 +9,10 @@ const SwapButton = () => {
     return (
         <Button
             isIconOnly
+            aria-label="Swap Colors"
+            title="Swap Colors"
+            aria-labelledby="Swap Colors"
             variant="light"
-            aria-label="swap button"
             className="text-[1.5rem]"
             onClick={handleSwap}
         >
