@@ -16,6 +16,7 @@ function ReleaseItem({ authors, imgSrc, title }: ReleaseItemProps) {
                     className="w-full h-full object-cover"
                     loading="lazy"
                     src={imgSrc}
+                    alt={title}
                 />
             </figure>
             <div className="flex items-center mt-3 gap-3">
