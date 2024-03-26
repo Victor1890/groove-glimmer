@@ -11,7 +11,7 @@ interface Props {
 export const Layout = ({ children }: Props) => {
   return (
     <Fragment>
-      <header className=" bg-white h-16 flex flex-col justify-center border-1 border-solid fixed w-full top-0 z-10">
+      <header className=" bg-white h-16 flex flex-col justify-center border-1 border-solid fixed w-full top-0 z-20">
         <Navbar />
       </header>
       <main className="flex items-start flex-col lg:flex-row min-h-screen">
