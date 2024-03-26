@@ -5,31 +5,31 @@ import { applyStyle } from "@/utils/color.util";
 const items = [
     {
         name: "Jose Perez",
-        picture: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+        picture: "assets/img/user.jpeg",
         amount: "4500 USD",
         date: "9/20/2021",
     },
     {
         name: "Jose Perez",
-        picture: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+        picture: "assets/img/user.jpeg",
         amount: "4500 USD",
         date: "9/20/2021",
     },
     {
         name: "Jose Perez",
-        picture: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+        picture: "assets/img/user.jpeg",
         amount: "4500 USD",
         date: "9/20/2021",
     },
     {
         name: "Jose Perez",
-        picture: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+        picture: "assets/img/user.jpeg",
         amount: "4500 USD",
         date: "9/20/2021",
     },
     {
         name: "Jose Perez",
-        picture: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+        picture: "assets/img/user.jpeg",
         amount: "4500 USD",
         date: "9/20/2021",
     },
@@ -56,7 +56,7 @@ function Example03() {
                                         style={applyStyle("color")}
                                         isBordered
                                         color="default"
-                                        src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+                                        src={item.picture}
                                     />
                                 </div>
 
