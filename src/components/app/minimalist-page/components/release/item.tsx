@@ -13,6 +13,8 @@ const ReleaseItem = ({ authors, imgSrc, title }: ReleaseItemProps) => (
             <Image
                 className="w-full h-full object-cover"
                 loading="lazy"
+                width={380}
+                height={460}
                 decoding="async"
                 src={imgSrc}
                 alt={title}
