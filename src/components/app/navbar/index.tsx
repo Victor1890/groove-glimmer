@@ -1,13 +1,13 @@
-import { GithubIcon } from "@/components/icons/navbar";
+import { GithubIcon, Logo } from "@/components/icons/navbar";
 import Link from "next/link";
 import React from "react";
-// import DarkModeSwitch from "./darkmodeswitch";
 
 const NavbarWrapper = () => {
   return (
     <div className="max-w-full mx-0 px-4 md:px-6">
       <nav className="flex items-center justify-between flex-wrap gap-5">
-        <div className="font-bold flex items-center text-[1.25rem] leading-8">
+        <div className="font-bold flex items-center">
+          <Logo className="w-[3.25rem]" />
           Groove Glimmer
         </div>
         <div className="flex flex-row items-center gap-5">
