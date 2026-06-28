@@ -9,86 +9,115 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as UiElementsRouteImport } from './routes/ui-elements'
-import { Route as MinimalistPageRouteImport } from './routes/minimalist-page'
-import { Route as IndexRouteImport } from './routes/index'
+import { Route as PreviewRouteImport } from './routes/_preview'
+import { Route as PreviewIndexRouteImport } from './routes/_preview/index'
+import { Route as PreviewUiElementsRouteImport } from './routes/_preview/ui-elements'
+import { Route as PreviewMinimalistPageRouteImport } from './routes/_preview/minimalist-page'
 
-const UiElementsRoute = UiElementsRouteImport.update({
-  id: '/ui-elements',
-  path: '/ui-elements',
+const PreviewRoute = PreviewRouteImport.update({
+  id: '/_preview',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MinimalistPageRoute = MinimalistPageRouteImport.update({
-  id: '/minimalist-page',
-  path: '/minimalist-page',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
+const PreviewIndexRoute = PreviewIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => PreviewRoute,
+} as any)
+const PreviewUiElementsRoute = PreviewUiElementsRouteImport.update({
+  id: '/ui-elements',
+  path: '/ui-elements',
+  getParentRoute: () => PreviewRoute,
+} as any)
+const PreviewMinimalistPageRoute = PreviewMinimalistPageRouteImport.update({
+  id: '/minimalist-page',
+  path: '/minimalist-page',
+  getParentRoute: () => PreviewRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/minimalist-page': typeof MinimalistPageRoute
-  '/ui-elements': typeof UiElementsRoute
+  '/': typeof PreviewIndexRoute
+  '/minimalist-page': typeof PreviewMinimalistPageRoute
+  '/ui-elements': typeof PreviewUiElementsRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/minimalist-page': typeof MinimalistPageRoute
-  '/ui-elements': typeof UiElementsRoute
+  '/minimalist-page': typeof PreviewMinimalistPageRoute
+  '/ui-elements': typeof PreviewUiElementsRoute
+  '/': typeof PreviewIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/minimalist-page': typeof MinimalistPageRoute
-  '/ui-elements': typeof UiElementsRoute
+  '/_preview': typeof PreviewRouteWithChildren
+  '/_preview/minimalist-page': typeof PreviewMinimalistPageRoute
+  '/_preview/ui-elements': typeof PreviewUiElementsRoute
+  '/_preview/': typeof PreviewIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/minimalist-page' | '/ui-elements'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/minimalist-page' | '/ui-elements'
-  id: '__root__' | '/' | '/minimalist-page' | '/ui-elements'
+  to: '/minimalist-page' | '/ui-elements' | '/'
+  id:
+    | '__root__'
+    | '/_preview'
+    | '/_preview/minimalist-page'
+    | '/_preview/ui-elements'
+    | '/_preview/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  MinimalistPageRoute: typeof MinimalistPageRoute
-  UiElementsRoute: typeof UiElementsRoute
+  PreviewRoute: typeof PreviewRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/ui-elements': {
-      id: '/ui-elements'
-      path: '/ui-elements'
-      fullPath: '/ui-elements'
-      preLoaderRoute: typeof UiElementsRouteImport
+    '/_preview': {
+      id: '/_preview'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof PreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/minimalist-page': {
-      id: '/minimalist-page'
-      path: '/minimalist-page'
-      fullPath: '/minimalist-page'
-      preLoaderRoute: typeof MinimalistPageRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
+    '/_preview/': {
+      id: '/_preview/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof PreviewIndexRouteImport
+      parentRoute: typeof PreviewRoute
+    }
+    '/_preview/ui-elements': {
+      id: '/_preview/ui-elements'
+      path: '/ui-elements'
+      fullPath: '/ui-elements'
+      preLoaderRoute: typeof PreviewUiElementsRouteImport
+      parentRoute: typeof PreviewRoute
+    }
+    '/_preview/minimalist-page': {
+      id: '/_preview/minimalist-page'
+      path: '/minimalist-page'
+      fullPath: '/minimalist-page'
+      preLoaderRoute: typeof PreviewMinimalistPageRouteImport
+      parentRoute: typeof PreviewRoute
     }
   }
 }
 
+interface PreviewRouteChildren {
+  PreviewMinimalistPageRoute: typeof PreviewMinimalistPageRoute
+  PreviewUiElementsRoute: typeof PreviewUiElementsRoute
+  PreviewIndexRoute: typeof PreviewIndexRoute
+}
+
+const PreviewRouteChildren: PreviewRouteChildren = {
+  PreviewMinimalistPageRoute: PreviewMinimalistPageRoute,
+  PreviewUiElementsRoute: PreviewUiElementsRoute,
+  PreviewIndexRoute: PreviewIndexRoute,
+}
+
+const PreviewRouteWithChildren =
+  PreviewRoute._addFileChildren(PreviewRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  MinimalistPageRoute: MinimalistPageRoute,
-  UiElementsRoute: UiElementsRoute,
+  PreviewRoute: PreviewRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
