@@ -8,7 +8,7 @@ export function SuggestionItem({
 	onApply,
 }: SuggestionItemProps) {
 	return (
-		<article className="border border-solid rounded-lg overflow-hidden">
+		<article className="border rounded-lg overflow-hidden">
 			<div
 				className="aspect-square flex items-center justify-center font-medium text-[1.25rem] leading-7.5"
 				style={{ background: color }}
@@ -20,7 +20,7 @@ export function SuggestionItem({
 					Aa
 				</span>
 			</div>
-			<div className="flex items-center justify-between border border-solid px-4 py-3">
+			<div className="flex items-center justify-between px-4 py-3">
 				<Button
 					variant="outline"
 					size="sm"

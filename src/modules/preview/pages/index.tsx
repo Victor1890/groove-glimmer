@@ -23,7 +23,7 @@ export function PreviewPage() {
 			<aside className="w-full lg:h-screen lg:w-auto sticky overflow-auto">
 				<Sidebar />
 			</aside>
-			<section className="bg-tertiary flex-1 w-full overflow-hidden lg:overflow-auto">
+			<section className="bg-tertiary flex-1 w-full overflow-hidden lg:overflow-auto h-[calc(100vh-1px)]">
 				<div className="w-full px-4 md:px-6 md:pt-14">
 					<div className="my-6" style={styles}>
 						<div className="text-center mb-6">
