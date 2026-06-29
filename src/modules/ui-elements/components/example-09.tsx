@@ -1,11 +1,11 @@
-import { TwentyOnePilotsLogo } from "@/components/icons/navbar";
 import { Card, CardContent, CardHeader } from "@/modules/ui/components/card";
-import { applyStyle, cssFgVar } from "@/utils/color.util";
-import Container from "./container";
+import { TwentyOnePilotsLogo } from "@/modules/ui/icons";
+import { applyStyle, cssFgVar } from "@/modules/utils";
+import { Wrapper } from "./wrapper";
 
-function Example09() {
+export function Example09() {
 	return (
-		<Container className="bg-bgDefault max-w-full break-inside-avoid mb-5">
+		<Wrapper className="bg-bgDefault max-w-full break-inside-avoid mb-5">
 			<Card className="p-6" style={applyStyle("bg")}>
 				<CardHeader className="flex flex-col gap-4 rounded-none md:flex-row md:items-center p-0">
 					<div className="w-max rounded-lg bg-gray-900 p-5 text-white">
@@ -28,11 +28,9 @@ function Example09() {
 					<Chart />
 				</CardContent>
 			</Card>
-		</Container>
+		</Wrapper>
 	);
 }
-
-export default Example09;
 
 function Chart() {
 	return (

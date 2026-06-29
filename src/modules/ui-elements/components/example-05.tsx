@@ -1,14 +1,14 @@
-import { useColor } from "@/hooks";
+import { useColor } from "@/modules/preview/hooks/use-color";
+import { FG_DEFAULT_COLOR } from "@/modules/preview/store/color.store";
 import { Card, CardContent } from "@/modules/ui/components/card";
-import { FG_DEFAULT_COLOR } from "@/stores";
-import { applyStyle, cssFgVar } from "@/utils/color.util";
-import Container from "./container";
+import { applyStyle, cssFgVar } from "@/modules/utils";
+import { Wrapper } from "./wrapper";
 
-function Example05() {
+export function Example05() {
 	const { bgRgb } = useColor();
 
 	return (
-		<Container className="bg-bgDefault break-inside-avoid mb-5">
+		<Wrapper className="bg-bgDefault break-inside-avoid mb-5">
 			<Card style={{ ...applyStyle("bg"), ...applyStyle("color") }}>
 				<CardContent className="flex flex-col gap-6 p-6 rounded-xl">
 					<p>Server Resources</p>
@@ -25,7 +25,7 @@ function Example05() {
 								className="absolute h-full rounded-full"
 								style={{
 									width: "40%",
-									...(Boolean(bgRgb)
+									...(bgRgb
 										? { ...applyStyle("bg", { fromVar: cssFgVar, alpha: "1" }) }
 										: { backgroundColor: FG_DEFAULT_COLOR }),
 								}}
@@ -44,8 +44,6 @@ function Example05() {
 					</div>
 				</CardContent>
 			</Card>
-		</Container>
+		</Wrapper>
 	);
 }
-
-export default Example05;

@@ -4,12 +4,12 @@ import {
 	AvatarImage,
 } from "@/modules/ui/components/avatar";
 import { Card, CardContent } from "@/modules/ui/components/card";
-import { applyStyle } from "@/utils/color.util";
-import Container from "./container";
+import { applyStyle } from "@/modules/utils";
+import { Wrapper } from "./wrapper";
 
-function Example02() {
+export function Example02() {
 	return (
-		<Container className="bg-bgDefault break-inside-avoid mb-5">
+		<Wrapper className="bg-bgDefault break-inside-avoid mb-5">
 			<Card
 				style={applyStyle("bg")}
 				className="rounded-xl shadow-md px-4 py-6 w-full border-0"
@@ -39,8 +39,6 @@ function Example02() {
 					</div>
 				</CardContent>
 			</Card>
-		</Container>
+		</Wrapper>
 	);
 }
-
-export default Example02;

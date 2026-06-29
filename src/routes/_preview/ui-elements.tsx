@@ -1,9 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { UIElements } from "@/modules/ui-elements/pages";
 
 export const Route = createFileRoute("/_preview/ui-elements")({
-	component: RouteComponent,
+	component: UIElements,
 });
-
-function RouteComponent() {
-	return <div>Hello "/ui-elements"!</div>;
-}

@@ -4,8 +4,8 @@ import {
 	AvatarImage,
 } from "@/modules/ui/components/avatar";
 import { Card, CardContent } from "@/modules/ui/components/card";
-import { applyStyle } from "@/utils/color.util";
-import Container from "./container";
+import { applyStyle } from "@/modules/utils";
+import { Wrapper } from "./wrapper";
 
 const items = [
 	{
@@ -40,9 +40,9 @@ const items = [
 	},
 ];
 
-function Example03() {
+export function Example03() {
 	return (
-		<Container className="bg-bgDefault break-inside-avoid mb-5">
+		<Wrapper className="bg-bgDefault break-inside-avoid mb-5">
 			<Card
 				style={applyStyle("bg")}
 				className="rounded-xl shadow-md px-3 border-0"
@@ -81,8 +81,6 @@ function Example03() {
 					</div>
 				</CardContent>
 			</Card>
-		</Container>
+		</Wrapper>
 	);
 }
-
-export default Example03;

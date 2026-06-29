@@ -13,7 +13,7 @@ import {
 
 export function UIElements() {
 	return (
-		<div className="columns-1 md:columns-2 lg:columns-3 gap-5">
+		<div className="columns-1 gap-4 sm:columns-2 md:columns-3 lg:columns-4">
 			<Example01 />
 			<Example02 />
 			<Example03 />

@@ -1,11 +1,10 @@
-import SVGDecorator from "@/components/icons/decorator";
-import SuitcaseFill from "@/components/icons/SuitcaseFill";
-import { applyStyle, cssFgVar } from "@/utils/color.util";
-import Container from "./container";
+import { SVGDecorator, SvgSuitcaseFill } from "@/modules/ui/icons";
+import { applyStyle, cssFgVar } from "@/modules/utils";
+import { Wrapper } from "./wrapper";
 
-function Example04() {
+export function Example04() {
 	return (
-		<Container className="bg-bgDefault break-inside-avoid mb-5">
+		<Wrapper className="bg-bgDefault break-inside-avoid mb-5">
 			<div
 				className="relative gap-4 p-6 rounded-xl flex items-center overflow-hidden"
 				style={{ ...applyStyle("bg"), ...applyStyle("color") }}
@@ -14,7 +13,7 @@ function Example04() {
 					className="flex items-center justify-center flex-0 w-16 h-16 rounded-full text-[2rem]"
 					style={applyStyle("bg", { fromVar: cssFgVar, alpha: "0.16" })}
 				>
-					<SuitcaseFill style={applyStyle("color", { alpha: "1" })} />
+					<SvgSuitcaseFill style={applyStyle("color", { alpha: "1" })} />
 				</div>
 				<div>
 					<p className="text-lg font-medium">Dear Client</p>
@@ -27,8 +26,6 @@ function Example04() {
 					style={applyStyle("color", { alpha: ".6" })}
 				/>
 			</div>
-		</Container>
+		</Wrapper>
 	);
 }
-
-export default Example04;

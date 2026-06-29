@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { useColor } from "@/modules/preview/hooks/use-color";
+import { FG_DEFAULT_COLOR } from "@/modules/preview/store/color.store";
+import { Button } from "@/modules/ui/components/button";
+import { Card, CardContent } from "@/modules/ui/components/card";
 import {
 	HeartIcon,
 	NextIcon,
@@ -6,22 +10,18 @@ import {
 	PreviousIcon,
 	RepeatOneIcon,
 	ShuffleIcon,
-} from "@/components/icons/actions";
-import { useColor } from "@/hooks";
-import { Button } from "@/modules/ui/components/button";
-import { Card, CardContent } from "@/modules/ui/components/card";
-import { FG_DEFAULT_COLOR } from "@/stores";
-import { applyStyle, cssFgVar } from "@/utils/color.util";
-import Container from "./container";
+} from "@/modules/ui/icons";
+import { applyStyle, cssFgVar } from "@/modules/utils";
+import { Wrapper } from "./wrapper";
 
-function Example07() {
+export function Example07() {
 	const { bgRgb } = useColor();
 	const [liked, setLiked] = useState(false);
 
 	return (
-		<Container className="bg-bgDefault break-inside-avoid mb-5">
+		<Wrapper className="bg-bgDefault break-inside-avoid mb-5">
 			<Card
-				className="max-w-[610px] border-0"
+				className="max-w-152.5 border-0"
 				style={{ ...applyStyle("bg"), ...applyStyle("color") }}
 			>
 				<CardContent>
@@ -29,7 +29,7 @@ function Example07() {
 						<div className="relative col-span-6 md:col-span-4">
 							<img
 								alt="Album cover"
-								className="object-cover shadow-sm-custom rounded-lg w-full h-[200px]"
+								className="object-cover shadow-sm-custom rounded-lg w-full h-50"
 								src="assets/img/Blurryface.webp"
 							/>
 						</div>
@@ -71,7 +71,7 @@ function Example07() {
 											className="absolute h-full rounded-full"
 											style={{
 												width: "50%",
-												...(Boolean(bgRgb)
+												...(bgRgb
 													? {
 															...applyStyle("bg", {
 																fromVar: cssFgVar,
@@ -113,8 +113,6 @@ function Example07() {
 					</div>
 				</CardContent>
 			</Card>
-		</Container>
+		</Wrapper>
 	);
 }
-
-export default Example07;

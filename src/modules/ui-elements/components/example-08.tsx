@@ -1,9 +1,9 @@
-import { applyStyle, cssBgVar, cssFgVar } from "@/utils/color.util";
-import Container from "./container";
+import { applyStyle, cssBgVar, cssFgVar } from "@/modules/utils";
+import { Wrapper } from "./wrapper";
 
-function Example08() {
+export function Example08() {
 	return (
-		<Container className="bg-bgDefault break-inside-avoid mb-5">
+		<Wrapper className="bg-bgDefault break-inside-avoid mb-5">
 			<div className="flex flex-col p-6 rounded-xl" style={applyStyle("bg")}>
 				<img
 					alt="background"
@@ -15,7 +15,7 @@ function Example08() {
 					<figure>
 						<img
 							alt="avatar"
-							className="flex item-center justify-center flex-0 w-20 h-20 rounded-full border-4 border-solid !border-white bg-black"
+							className="flex item-center justify-center flex-0 w-20 h-20 rounded-full border-4 border-solid border-white! bg-black"
 							src="/assets/img/twenty-one-pilots-logo.webp"
 							style={{ borderColor: cssBgVar }}
 						/>
@@ -28,8 +28,6 @@ function Example08() {
 					</p>
 				</div>
 			</div>
-		</Container>
+		</Wrapper>
 	);
 }
-
-export default Example08;

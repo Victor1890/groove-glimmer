@@ -1,11 +1,11 @@
 import { Button } from "@/modules/ui/components/button";
 import { Card, CardContent } from "@/modules/ui/components/card";
-import { applyStyle, cssBgVar, cssFgVar } from "@/utils/color.util";
-import Container from "./container";
+import { applyStyle, cssBgVar, cssFgVar } from "@/modules/utils";
+import { Wrapper } from "./wrapper";
 
-function Example10() {
+export function Example10() {
 	return (
-		<Container className="bg-bgDefault max-w-full break-inside-avoid mb-5">
+		<Wrapper className="bg-bgDefault max-w-full break-inside-avoid mb-5">
 			<Card className="p-6" style={applyStyle("bg")}>
 				<CardContent className="flex flex-col rounded-xl text-center gap-10">
 					<p className="text-sm font-bold" style={applyStyle("color")}>
@@ -30,8 +30,6 @@ function Example10() {
 					</Button>
 				</CardContent>
 			</Card>
-		</Container>
+		</Wrapper>
 	);
 }
-
-export default Example10;
