@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PreviewRouteImport } from './routes/_preview'
 import { Route as PreviewIndexRouteImport } from './routes/_preview/index'
+import { Route as PreviewWebsitePreviewRouteImport } from './routes/_preview/website-preview'
 import { Route as PreviewUiElementsRouteImport } from './routes/_preview/ui-elements'
 import { Route as PreviewMinimalistPageRouteImport } from './routes/_preview/minimalist-page'
 
@@ -21,6 +22,11 @@ const PreviewRoute = PreviewRouteImport.update({
 const PreviewIndexRoute = PreviewIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => PreviewRoute,
+} as any)
+const PreviewWebsitePreviewRoute = PreviewWebsitePreviewRouteImport.update({
+  id: '/website-preview',
+  path: '/website-preview',
   getParentRoute: () => PreviewRoute,
 } as any)
 const PreviewUiElementsRoute = PreviewUiElementsRouteImport.update({
@@ -38,10 +44,12 @@ export interface FileRoutesByFullPath {
   '/': typeof PreviewIndexRoute
   '/minimalist-page': typeof PreviewMinimalistPageRoute
   '/ui-elements': typeof PreviewUiElementsRoute
+  '/website-preview': typeof PreviewWebsitePreviewRoute
 }
 export interface FileRoutesByTo {
   '/minimalist-page': typeof PreviewMinimalistPageRoute
   '/ui-elements': typeof PreviewUiElementsRoute
+  '/website-preview': typeof PreviewWebsitePreviewRoute
   '/': typeof PreviewIndexRoute
 }
 export interface FileRoutesById {
@@ -49,18 +57,20 @@ export interface FileRoutesById {
   '/_preview': typeof PreviewRouteWithChildren
   '/_preview/minimalist-page': typeof PreviewMinimalistPageRoute
   '/_preview/ui-elements': typeof PreviewUiElementsRoute
+  '/_preview/website-preview': typeof PreviewWebsitePreviewRoute
   '/_preview/': typeof PreviewIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/minimalist-page' | '/ui-elements'
+  fullPaths: '/' | '/minimalist-page' | '/ui-elements' | '/website-preview'
   fileRoutesByTo: FileRoutesByTo
-  to: '/minimalist-page' | '/ui-elements' | '/'
+  to: '/minimalist-page' | '/ui-elements' | '/website-preview' | '/'
   id:
     | '__root__'
     | '/_preview'
     | '/_preview/minimalist-page'
     | '/_preview/ui-elements'
+    | '/_preview/website-preview'
     | '/_preview/'
   fileRoutesById: FileRoutesById
 }
@@ -84,6 +94,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PreviewIndexRouteImport
       parentRoute: typeof PreviewRoute
     }
+    '/_preview/website-preview': {
+      id: '/_preview/website-preview'
+      path: '/website-preview'
+      fullPath: '/website-preview'
+      preLoaderRoute: typeof PreviewWebsitePreviewRouteImport
+      parentRoute: typeof PreviewRoute
+    }
     '/_preview/ui-elements': {
       id: '/_preview/ui-elements'
       path: '/ui-elements'
@@ -104,12 +121,14 @@ declare module '@tanstack/react-router' {
 interface PreviewRouteChildren {
   PreviewMinimalistPageRoute: typeof PreviewMinimalistPageRoute
   PreviewUiElementsRoute: typeof PreviewUiElementsRoute
+  PreviewWebsitePreviewRoute: typeof PreviewWebsitePreviewRoute
   PreviewIndexRoute: typeof PreviewIndexRoute
 }
 
 const PreviewRouteChildren: PreviewRouteChildren = {
   PreviewMinimalistPageRoute: PreviewMinimalistPageRoute,
   PreviewUiElementsRoute: PreviewUiElementsRoute,
+  PreviewWebsitePreviewRoute: PreviewWebsitePreviewRoute,
   PreviewIndexRoute: PreviewIndexRoute,
 }
 
