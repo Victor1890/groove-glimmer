@@ -9,7 +9,10 @@ import { Section } from "./section";
 
 export function Sidebar() {
 	return (
-		<div className="transition-transform h-full relative w-full lg:w-96 shrink-0 z-202 overflow-y-auto sm:border-r sm:border-border py-6 px-3 md:ml-0 md:flex md:flex-col md:static md:translate-x-0">
+		<nav
+			aria-label="Color settings"
+			className="transition-transform h-full relative w-full lg:w-96 shrink-0 z-202 overflow-y-auto sm:border-r sm:border-border py-6 px-3 md:ml-0 md:flex md:flex-col md:static md:translate-x-0"
+		>
 			<div className="flex flex-col justify-between">
 				<div className="flex flex-col gap-6 px-2">
 					<Section label="Contrast Relation">
@@ -35,6 +38,6 @@ export function Sidebar() {
 					</Section>
 				</div>
 			</div>
-		</div>
+		</nav>
 	);
 }

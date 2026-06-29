@@ -8,6 +8,8 @@ export function SVGTwentyOnePilotsLogo(props: SVGProps<SVGSVGElement>) {
 			height="1rem"
 			version="1.0"
 			viewBox="0 0 456 456"
+			aria-hidden="true"
+			role="presentation"
 			{...props}
 		>
 			<path

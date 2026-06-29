@@ -49,6 +49,8 @@ export function Example07() {
 									size="icon"
 									className="text-default-900/60 -translate-y-2 translate-x-2"
 									style={applyStyle("color")}
+									aria-label={liked ? "Unlike" : "Like"}
+									aria-pressed={liked}
 									onClick={() => setLiked((v) => !v)}
 								>
 									<HeartIcon
@@ -93,19 +95,44 @@ export function Example07() {
 							</div>
 
 							<div className="flex w-full items-center justify-center">
-								<Button variant="ghost" size="icon" style={applyStyle("color")}>
+								<Button
+									variant="ghost"
+									size="icon"
+									style={applyStyle("color")}
+									aria-label="Repeat"
+								>
 									<RepeatOneIcon />
 								</Button>
-								<Button variant="ghost" size="icon" style={applyStyle("color")}>
+								<Button
+									variant="ghost"
+									size="icon"
+									style={applyStyle("color")}
+									aria-label="Previous track"
+								>
 									<PreviousIcon />
 								</Button>
-								<Button variant="ghost" size="icon" style={applyStyle("color")}>
+								<Button
+									variant="ghost"
+									size="icon"
+									style={applyStyle("color")}
+									aria-label="Pause"
+								>
 									<PauseCircleIcon size={54} />
 								</Button>
-								<Button variant="ghost" size="icon" style={applyStyle("color")}>
+								<Button
+									variant="ghost"
+									size="icon"
+									style={applyStyle("color")}
+									aria-label="Next track"
+								>
 									<NextIcon />
 								</Button>
-								<Button variant="ghost" size="icon" style={applyStyle("color")}>
+								<Button
+									variant="ghost"
+									size="icon"
+									style={applyStyle("color")}
+									aria-label="Shuffle"
+								>
 									<ShuffleIcon />
 								</Button>
 							</div>

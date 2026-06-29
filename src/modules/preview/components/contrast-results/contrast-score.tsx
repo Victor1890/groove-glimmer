@@ -22,7 +22,7 @@ export function ContrastScore() {
 				</span>
 				<span className="text-5xl font-bold block">{contrast.toFixed(2)}</span>
 			</div>
-			<Emoji className="text-4xl" />
+			<Emoji className="text-4xl" aria-hidden="true" />
 		</div>
 	);
 }

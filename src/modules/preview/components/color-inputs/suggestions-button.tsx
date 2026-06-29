@@ -42,9 +42,9 @@ export function SuggestionsButton() {
 					</DialogHeader>
 					<div className="p-6">
 						<section className="mb-4">
-							<span className="font-medium text-[1.125rem] leading-7 mb-4 block">
+							<h3 className="font-medium text-[1.125rem] leading-7 mb-4">
 								Background Suggestions
-							</span>
+							</h3>
 							<Suggestions
 								className="grid-cols-2"
 								type="background"
@@ -52,9 +52,9 @@ export function SuggestionsButton() {
 							/>
 						</section>
 						<section className="mb-4">
-							<span className="font-medium text-[1.125rem] leading-7 mb-4 block">
+							<h3 className="font-medium text-[1.125rem] leading-7 mb-4">
 								Foreground Suggestions
-							</span>
+							</h3>
 							<Suggestions
 								className="grid-cols-2"
 								type="foreground"

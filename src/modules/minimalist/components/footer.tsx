@@ -9,9 +9,15 @@ export function Footer() {
 		>
 			<TwentyOnePilotsLogo width={50} height={50} />
 			<ul className="flex gap-6 flex-wrap font-medium">
-				<li>Terms & Conditions</li>
-				<li>Privacy Policy</li>
-				<li>Cookies Policy</li>
+				<li>
+					<a href="#terms">Terms & Conditions</a>
+				</li>
+				<li>
+					<a href="#privacy">Privacy Policy</a>
+				</li>
+				<li>
+					<a href="#cookies">Cookies Policy</a>
+				</li>
 			</ul>
 		</footer>
 	);

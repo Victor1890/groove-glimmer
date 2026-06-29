@@ -6,6 +6,8 @@ export const Community = (props: React.SVGProps<SVGSVGElement>) => {
 			height="24"
 			viewBox="0 0 24 24"
 			fill="none"
+			aria-hidden="true"
+			role="presentation"
 			{...props}
 		>
 			<path

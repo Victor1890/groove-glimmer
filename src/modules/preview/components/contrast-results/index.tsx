@@ -11,7 +11,7 @@ export function ContrastResults() {
 	} = useValidContrastLevel();
 
 	return (
-		<div className="flex flex-col gap-8 mt-8">
+		<div className="flex flex-col gap-8 mt-8" aria-live="polite">
 			<ContrastScore />
 			<ul className="grid gap-y-5 gap-x-8 md:flex-1 sm:grid-cols-2">
 				<ContrastLevel

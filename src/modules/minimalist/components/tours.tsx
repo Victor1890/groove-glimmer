@@ -37,8 +37,10 @@ function TourItem({ location, name, year, zone }: TourItemProps) {
 			<p className="truncate lg:w-2/12">{zone}</p>
 			<p className="lg:w-2/12">{year}</p>
 			<div className="flex justify-end items-center">
-				<span className="mr-2 lg:hidden">Get Ticket</span>
-				<ArrowRightUpLine className="text-[1.25rem]" />
+				<a href="#ticket" className="mr-2 lg:hidden">
+					Get Ticket
+				</a>
+				<ArrowRightUpLine className="text-[1.25rem]" aria-hidden="true" />
 			</div>
 		</article>
 	);

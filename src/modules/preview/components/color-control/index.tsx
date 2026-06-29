@@ -9,6 +9,8 @@ interface ColorControlProps {
 }
 
 export function ColorControl({ label, onChange, value }: ColorControlProps) {
+	const inputId = `color-control-${label?.toLowerCase().replace(/\s+/g, "-") || "input"}`;
+
 	return (
 		<div className="flex items-center flex-1 w-full gap-4">
 			{/* Preview */}
@@ -19,8 +21,10 @@ export function ColorControl({ label, onChange, value }: ColorControlProps) {
 
 			{/* Content */}
 			<div className="flex-1">
-				<label className="font-medium block mb-2">{label}</label>
-				<ColorInput value={value} onChange={onChange} />
+				<label className="font-medium block mb-2" htmlFor={inputId}>
+					{label}
+				</label>
+				<ColorInput value={value} onChange={onChange} id={inputId} />
 			</div>
 
 			<div className="flex flex-col gap-1">

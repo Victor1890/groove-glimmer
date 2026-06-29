@@ -1,1 +1,1 @@
-export { default as ColorPickerFill } from './ColorPickerFill'
+export { default as ColorPickerFill } from "./ColorPickerFill";

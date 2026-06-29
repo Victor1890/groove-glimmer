@@ -12,12 +12,12 @@ export function Example09() {
 						<TwentyOnePilotsLogo className="h-6 w-6" />
 					</div>
 					<div>
-						<h6
+						<h2
 							style={applyStyle("color")}
 							className="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed"
 						>
 							Bar Chart
-						</h6>
+						</h2>
 						<p className="max-w-sm font-normal" style={applyStyle("color")}>
 							Visualize your data in a simple way using the
 							<span className="font-semibold"> chart</span> plugin.
@@ -40,7 +40,11 @@ function Chart() {
 			height="146"
 			viewBox="0 0 348 146"
 			width="348"
+			role="img"
+			aria-label="Bar chart showing data"
 		>
+			<title>Bar Chart</title>
+			<desc>A horizontal bar chart with 7 bars of varying lengths</desc>
 			<rect
 				fill="currentColor"
 				height="19.1811"

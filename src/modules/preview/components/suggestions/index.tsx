@@ -37,7 +37,7 @@ const Suggestions = ({ type, className, onApply }: SuggestionProps) => {
 	if (isEmpty) return <p className="">There is nothing more to suggest</p>;
 
 	return (
-		<div className={clsx("grid gap-5", className)}>
+		<div className={clsx("grid gap-5", className)} aria-live="polite">
 			{suggestions.map(({ color, contrast, id }) => (
 				<SuggestionItem
 					key={id}

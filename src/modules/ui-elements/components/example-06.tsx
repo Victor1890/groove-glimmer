@@ -15,7 +15,14 @@ export function Example06() {
 						<p className="text-lg font-medium">Project Progress</p>
 						<p className="text-sm">50%</p>
 					</div>
-					<div className="relative flex items-center select-none touch-none">
+					<div
+						role="progressbar"
+						aria-valuenow={50}
+						aria-valuemin={0}
+						aria-valuemax={100}
+						aria-label="Project progress"
+						className="relative flex items-center select-none touch-none"
+					>
 						<div
 							className="relative flex-1 rounded-full h-2"
 							style={applyStyle("bg", { fromVar: cssFgVar, alpha: "0.16" })}

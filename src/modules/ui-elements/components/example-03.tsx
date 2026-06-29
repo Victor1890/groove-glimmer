@@ -64,7 +64,7 @@ export function Example03() {
 							<div key={item.name} className="grid grid-cols-4 w-full">
 								<div className="w-full">
 									<Avatar className="border-2 border-background">
-										<AvatarImage src={item.picture} />
+										<AvatarImage src={item.picture} alt={item.name} />
 										<AvatarFallback>JP</AvatarFallback>
 									</Avatar>
 								</div>

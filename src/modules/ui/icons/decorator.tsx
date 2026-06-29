@@ -6,6 +6,8 @@ export function SVGDecorator(props: React.SVGProps<SVGSVGElement>) {
 			viewBox="0 0 75 81"
 			width="75"
 			xmlns="http://www.w3.org/2000/svg"
+			aria-hidden="true"
+			role="presentation"
 			{...props}
 		>
 			<path

@@ -29,7 +29,13 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<HeadContent />
 			</head>
 			<body>
-				{children}
+				<a
+					href="#main-content"
+					className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-background focus:text-foreground"
+				>
+					Skip to main content
+				</a>
+				<main id="main-content">{children}</main>
 				<TanStackDevtools
 					config={{
 						position: "bottom-right",

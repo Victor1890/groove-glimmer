@@ -16,7 +16,14 @@ export function Example05() {
 						<p className="text-lg font-bold">$30,227.00</p>
 						<p className="text-base mt-2">Estimated savings</p>
 					</div>
-					<div className="relative flex items-center select-none touch-none">
+					<div
+						role="progressbar"
+						aria-valuenow={40}
+						aria-valuemin={0}
+						aria-valuemax={100}
+						aria-label="Server resources savings"
+						className="relative flex items-center select-none touch-none"
+					>
 						<div
 							className="relative flex-1 rounded-full h-2"
 							style={applyStyle("bg", { fromVar: cssFgVar, alpha: "0.16" })}

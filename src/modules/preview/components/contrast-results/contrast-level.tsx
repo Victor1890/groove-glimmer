@@ -19,9 +19,15 @@ export function ContrastLevel({
 			<div className="flex items-center justify-between">
 				<span className="text-[1.25rem] leading-7.5 font-bold">{contrast}</span>
 				{isValid ? (
-					<CheckFill className="text-2xl text-green-700" />
+					<>
+						<CheckFill className="text-2xl text-green-700" />
+						<span className="sr-only">Pass</span>
+					</>
 				) : (
-					<CloseFill className="text-2xl text-red-700" />
+					<>
+						<CloseFill className="text-2xl text-red-700" />
+						<span className="sr-only">Fail</span>
+					</>
 				)}
 			</div>
 		</li>

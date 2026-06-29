@@ -21,10 +21,46 @@ export function About() {
 			</p>
 			<div className="flex flex-col mt-12 gap-4 lg:justify-between lg:flex-row">
 				<ul className="flex flex-wrap justify-center gap-4 lg:gap-6 lg:justify-start">
-					<li className="underline">Instagram</li>
-					<li className="underline">Youtube</li>
-					<li className="underline">Spotify</li>
-					<li className="underline">Twitter</li>
+					<li>
+						<a
+							href="https://instagram.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline"
+						>
+							Instagram
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://youtube.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline"
+						>
+							Youtube
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://spotify.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline"
+						>
+							Spotify
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://twitter.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline"
+						>
+							Twitter
+						</a>
+					</li>
 				</ul>
 			</div>
 		</section>

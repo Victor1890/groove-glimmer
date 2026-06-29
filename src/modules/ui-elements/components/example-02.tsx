@@ -31,7 +31,10 @@ export function Example02() {
 									key={`avatar-${index}`}
 									className="border-2 border-background"
 								>
-									<AvatarImage src="assets/img/user.jpeg" />
+									<AvatarImage
+										src="assets/img/user.jpeg"
+										alt={`Agent ${index + 1}`}
+									/>
 									<AvatarFallback>U</AvatarFallback>
 								</Avatar>
 							))}

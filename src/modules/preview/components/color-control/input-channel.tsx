@@ -51,8 +51,11 @@ export function InputChannel({
 
 	return (
 		<div className="flex items-center justify-between">
-			<span className="font-bold">{label}</span>
+			<label className="font-bold" htmlFor={`channel-${label}`}>
+				{label}
+			</label>
 			<Input
+				id={`channel-${label}`}
 				className="w-16 text-center"
 				type="text"
 				placeholder="0"

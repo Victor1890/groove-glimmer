@@ -1,1 +1,1 @@
-export { LinkedInFill } from './linkedin'
+export { LinkedInFill } from "./linkedin";
